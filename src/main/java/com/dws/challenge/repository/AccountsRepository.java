@@ -5,9 +5,9 @@ import com.dws.challenge.exception.DuplicateAccountIdException;
 
 public interface AccountsRepository {
 
-  void createAccount(Account account) throws DuplicateAccountIdException;
+    void createAccount(Account account) throws DuplicateAccountIdException;
 
-  Account getAccount(String accountId);
+    Account getAccount(String accountId);
 
-  void clearAccounts();
+    void clearAccounts();
 }
