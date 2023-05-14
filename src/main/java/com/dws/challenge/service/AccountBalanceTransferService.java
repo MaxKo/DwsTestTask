@@ -3,20 +3,20 @@ package com.dws.challenge.service;
 import com.dws.challenge.domain.Account;
 import com.dws.challenge.dto.AccountBalanceTransferDto;
 import com.dws.challenge.exception.InsufficientBalanceAmountException;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Log4j2
 public class AccountBalanceTransferService {
 
-    private AccountsService accountsService;
+    private final AccountsService accountsService;
 
-    private NotificationService notificationService;
+    private final NotificationService notificationService;
 
     protected void transferThreadSafe(Account sender, Account receiver, BigDecimal amount) {
         Account firstLock = sender;
