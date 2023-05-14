@@ -2,11 +2,13 @@ package com.dws.challenge;
 
 import com.dws.challenge.domain.Account;
 import com.dws.challenge.service.AccountsService;
+import com.dws.challenge.service.NotificationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -26,7 +28,8 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 @SpringBootTest
 @WebAppConfiguration
 class AccountsControllerTest {
-
+    @MockBean
+    private NotificationService notificationService;
     private MockMvc mockMvc;
 
     @Autowired

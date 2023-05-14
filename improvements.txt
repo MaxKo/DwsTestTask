@@ -1,0 +1,8 @@
+accounts should not be stored in memory
+dto-entities between representation, service layers and domain
+ControllerAdvice - should improve code look without try-catch
+all text messages should be moved to resources
+current solution works on a single node with multiple threads. Solution for several nodes would require distributed transaction manager and different account db
+add swagger/openAPI
+actuator/visualVM/
+
